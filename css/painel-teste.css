@@ -1,0 +1,101 @@
+/* CARD */
+
+.card {
+    background-color: rgb(207, 209, 233);
+    height: 150px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px black;
+    border: solid 2px rgb(233, 233, 233);
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+/* TITULO CARD */
+
+.card__container___titulo {
+    width: 100%;
+    height: 20px;
+    padding-top: 10px;
+    background-color: rgb(159, 167, 255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card__titulo {
+    font-size: 12px;
+    font-weight: 800;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* FLEXBOX CONTEUDO */
+
+.card__container___conteudo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* IMAGEM */
+
+.card__container___imagem {
+    width: 100px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.card__status {
+    width: 7px;
+    height: 7px;
+    background-color: green;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 2px green;
+}
+
+.card__imagem {
+    width: 100%;
+    height: 100%;
+}
+
+.card__imagem___descricao {
+    font-size: 11px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* BARRA */
+
+.card__conteudo___barra {
+    width: 2px;
+    height: 80px;
+    background-color: rgb(75, 75, 75);
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+/* INFORMAÇÕES */
+
+.card__container___informacoes {
+    width: 200px;
+    height: 90px;
+    margin-right: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.card__informacoes___dados {
+    font-size: 12px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,439 @@
+/* BODY */
+
+@font-face {
+    font-family: "Biennale";
+    src: url(/fonts/Biennale_Black.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(24,42,116,1) 100%);
+    overflow-x: hidden;
+}
+
+/* CABECALHO */
+
+nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    width: 100%;
+}
+
+.logo-moura {
+    width: 200px;
+}
+
+.mobile__menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile__menu div {
+    width: 32px;
+    height: 4px;
+    background: #cccccc;
+    margin: 8px;
+}
+
+.nav__cabecalho {
+    align-items: center;
+    list-style: none;
+    display: flex;
+}
+
+.itens-nav__cabecalho {
+    width: 110px;
+    text-align: center;
+}
+
+
+.link-itens-nav__cabecalho {
+    font-size: 16px;
+    text-decoration: none;
+    color: #182a74;
+    font-family: Helvetica;
+}
+
+.itens-nav__cabecalho.login {
+    position: relative;
+    top: 10px;
+}
+
+.whatsapp-nav__cabecalho {
+    top: 52%;
+    transform: translate(0,-80%);
+    cursor: pointer;
+    position: absolute;
+    right: -52px;
+    float: right;
+}
+
+.whatsapp__icon {
+    position: relative;
+    bottom: 5px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border: 0;
+}
+
+#login__cnpj, #login__senha  {
+    border-width: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 132px;
+    border-color:#007DCE;
+}
+
+#login__cnpj {
+    margin-bottom: 5px;
+}
+
+.login__botao-entrar {
+    border-width: 2px;
+    background-color:#ffcf6d;
+    font-family: Helvetica;
+    position: relative;
+    top: 5px;
+}
+
+.login__solicitar-acesso {
+    color: #007DCE;
+    position: relative;
+    font-family: helvetica;
+    font-size: 12px;
+    margin-left: 5px;
+    top: 5px;
+}
+
+.login__botao-entrar:hover {
+    cursor: pointer;
+}
+
+.login-erro {
+    color: red;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.botao__assistencias {
+    border-width: 2px;
+    background-color:#007DCE;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 500;
+    position: relative;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.nav__cabecalho.active {
+    transform: translateX(0);
+}
+
+/* MAIN */
+
+.main {
+    min-height: 100vh;
+}
+
+.container__titulo-e-sair {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.titulo__razao-social {
+    font-family: helvetica, arial, sans-serif;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 550;
+    text-shadow: 2px 2px 8px #000000;
+    color: white;
+}
+
+.botao-sair {
+    color: rgb(240, 236, 13);
+    font-family: helvetica, arial, sans-serif;
+    font-size: 25px;
+    margin-top: 30px;
+    text-shadow: 2px 2px 8px #000000;
+    font-weight: 550;
+}
+
+.container_tabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.tabela__instrucao {
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.tabela {
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: helvetica, arial, sans-serif;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.coluna_css {
+    font-size: 20px;
+    font-family: helvetica, arial, sans-serif;
+    border: 2px solid black;
+    background-color:#cccccc;
+}
+
+.cadastro__principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 2px black;
+    display: flex;
+    padding: 20px;
+}
+
+fieldset {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.legend {
+    text-align: center;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 400px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+.input-label {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+.submit-container {
+    padding-top: 15px;
+}
+
+.submit {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container_tabela {
+        width: 100vw;
+        overflow-x: auto;
+        justify-content: left;
+        align-items: initial;
+    }
+
+    .tabela__instrucao {
+        display: flex;
+    }
+
+    .formulario {
+        width: 75%;
+    }
+
+    .titulo-principal {
+        font-size: 35px;
+        text-align: center;
+        width: 75%;
+    }
+
+    .input {
+        width: 200px;
+    }
+}
+
+/* FOOTER */
+
+.rodape {
+    margin-top: 200px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background: #fff;
+}
+
+.rodape__moura--logo {
+    width: 150px;
+    height: 51px;
+}
+
+.moura-logo__rodape {
+    width: 150px;
+}
+
+.rodape__whatsapp {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.rodape__whatsapp___texto {
+    font-size: 12px;
+    padding-left: 5px;
+    color: #6ebe71;
+    font-weight: 700;
+    font-family: 'Biennale', sans-serif;
+}
+
+.rodape__phone {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.rodape__phone___texto {
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: 'Biennale', sans-serif;
+    color: #ffcf6d;
+}
+
+.rodape__texto {
+    font-weight: 700;
+    font-family: 'Biennale', sans-serif;
+    font-size: 12px;
+    color: #182a74;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .rodape__texto {
+        text-align: center;
+    }
+}

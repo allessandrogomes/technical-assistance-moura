@@ -1,0 +1,326 @@
+/*BODY*/
+
+/*CABEÇALHO*/
+.principal__cabecalho {
+    display: block;
+    background-image: url(./img/bg-header.png);
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+    background-position: calc(60% - 800px);
+    overflow: hidden;
+}
+
+.principal__cabecalho::before {
+    content: " ";
+    display: table;
+}
+
+.container__cabecalho {
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+    display: block;
+}
+
+.principal__cabecalho::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.logo-moura {
+    background-image: url(./img/sprite.png);
+    width: 199px;
+    height: 51px;
+    background-position: 0 -3458px;
+    display: block;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    float: left;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.nav__cabecalho {
+    float: right;
+    position: absolute;
+    right: 100px;
+    margin-top: 16px;
+}
+
+.itens-nav__cabecalho {
+    display: inline-block;
+    position: relative;
+}
+
+.link-itens-nav__cabecalho {
+    padding: 24px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #182a74;
+    font-family: Helvetica;
+    display: block;
+    position: relative;
+}
+
+.whatsapp-nav__cabecalho {
+    top: 52%;
+    transform: translate(0,-80%);
+    cursor: pointer;
+    position: absolute;
+    right: -52px;
+    float: right;
+}
+
+.whatsapp-nav__cabecalho img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border: 0;
+}
+
+/*MAIN*/
+
+.main {
+    position: relative;
+}
+
+.header__produtos {
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header__produtos-gradiente {
+    background-color: #1d2d6a;
+    position: absolute;
+    background-image: -webkit-linear-gradient(top, #1d2d6a, #fff);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 150%;
+}
+
+.container__header-produtos {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 3;
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container__header-produtos::before {
+    content: " ";
+    display: table;
+}
+
+.container__header-produtos::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.texto__header-produtos {
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Biennale";
+    line-height: 1.1;
+}
+
+/*cards*/
+
+.container-principal__lista {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;;
+    height: 100%;
+}
+
+.aplicacao {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.treinamentos {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card2 {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card3 {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card4 {
+    width: 100%;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.container-card__lista {
+    position: absolute;
+    width: 990px;
+    height: 337.59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-img-card__lista {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.container-texto__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.container-img-card__lista::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(22,47,152,.3);
+    z-index: 2;
+}
+
+.img-card__lista {
+    position: relative;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    transition: all .5s ease-in-out 0s;
+}
+
+.container-card__lista:hover .img-card__lista{
+    transform: scale(1.2);
+}
+
+.container__tituloedescricao-card {
+    width: 75%;
+    padding-bottom: 20px;
+}
+
+.titulo-card {
+    width: 70%;
+    padding-bottom: 10px;
+    font-size: 32px;
+    font-family: "Biennale";
+    font-weight: 500;
+    color: #182a74;
+}
+
+.descricao-card {
+    width: 123%;
+    font-size: 21px;
+    font-family: "Biennale";
+    font-weight: 450;
+    color: #182a74;
+}
+
+.container__botao-card {
+    width: 165px;
+    padding-bottom: 100px;
+}
+
+.botao-card {
+    width: 160px;
+    font-size: 14px;
+    font-family: "Biennale";
+    text-transform: uppercase;
+    font-weight: 380;
+    color: #182a74;
+    cursor: pointer;
+    background-color: #ffe013;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding: 8px 0;
+}
+
+.botao-card:hover {
+    background-color: #ffca00;
+}
+
+.container__aplicacoes-card {
+    width: 520px;
+}
+
+.aplicacoes-card {
+    font-size: 14px;
+    font-weight: 380;
+    text-transform: uppercase;
+    color: #000;
+    font-family: "Biennale";
+    padding-bottom:8px;
+}
+
+.modelos-de-carros__card {
+    color: #8a8a8a;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Biennale";
+    width: 101%;
+}

@@ -1,0 +1,464 @@
+/* BODY */
+
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(24,42,116,1) 100%);
+    overflow-x: hidden;
+}
+
+/* CABECALHO */
+
+
+/*CABECALHO*/
+
+@font-face {
+    font-family: "Biennale";
+    src: url(/fonts/Biennale_Black.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    width: 100%;
+}
+
+.logo-moura {
+    width: 200px;
+}
+
+.mobile__menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile__menu div {
+    width: 32px;
+    height: 4px;
+    background: #cccccc;
+    margin: 8px;
+}
+
+.nav__cabecalho {
+    align-items: center;
+    list-style: none;
+    display: flex;
+}
+
+.itens-nav__cabecalho {
+    width: 110px;
+    text-align: center;
+}
+
+.itens-nav__cabecalho:nth-child(7) {
+    text-align: left;
+    width: 155px
+}
+
+.itens-nav__cabecalho.login {
+    position: relative;
+    top: 10px;
+}
+
+.link-itens-nav__cabecalho {
+    font-size: 16px;
+    text-decoration: none;
+    color: #182a74;
+    font-family: Helvetica;
+}
+
+.whatsapp-nav__cabecalho {
+    top: 52%;
+    transform: translate(0,-80%);
+    cursor: pointer;
+    position: absolute;
+    right: -52px;
+    float: right;
+}
+
+.whatsapp__icon {
+    position: relative;
+    bottom: 5px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border: 0;
+}
+
+#login__cnpj, #login__senha  {
+    border-width: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 132px;
+    border-color:#007DCE;
+}
+
+#login__cnpj {
+    margin-bottom: 5px;
+}
+
+.login__botao-entrar {
+    border-width: 2px;
+    background-color:#ffcf6d;
+    font-family: Helvetica;
+    position: relative;
+    top: 5px;
+}
+
+.login__solicitar-acesso {
+    color: #007DCE;
+    position: relative;
+    font-family: helvetica;
+    font-size: 12px;
+    margin-left: 5px;
+    top: 5px;
+}
+
+.login__botao-entrar:hover {
+    cursor: pointer;
+}
+
+.login-erro {
+    color: red;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.botao__assistencias {
+    border-width: 2px;
+    background-color:#007DCE;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 500;
+    position: relative;
+}
+
+.botao-sair {
+    border-width: 2px;
+    background-color:#ffcf6d;
+    font-family: Helvetica;
+    position: relative;
+    margin-top: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .itens-nav__cabecalho.login {
+        display: inline-grid;
+        top: -34px;
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .itens-nav__cabecalho.login {
+        position: relative;
+        bottom: 30px;
+        top: -30px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1213px) {
+    .login__botao-entrar {
+        display: block;
+        margin-left: 0;
+        top: 5px;
+    }
+    
+    .login__solicitar-acesso {
+        margin-left: 0;
+        top: 5px;
+        position: relative;
+    }
+
+    body {
+        overflow-x:hidden;
+    }
+}
+
+.nav__cabecalho.active {
+    transform: translateX(0);
+}
+
+/* MAIN */
+
+.barra-mobile {
+    display: none;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 10px;
+    background-color:#182a74;
+    opacity: 40%;
+}
+
+.container__chamada__main-mobile {
+    display: none;
+}
+
+.seta-baixo {
+    display: none;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro__principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 2px black;
+    display: flex;
+    padding: 20px;
+}
+
+.painel-admin__botao {
+    width: 80%;
+    background-color: #aaaaaa;
+    height: 70px;
+    border: 5px solid #007DCE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+.painel-admin__botao--link {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+fieldset {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.legend {
+    text-align: center;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 400px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+.input-label {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+.titulo-principal {
+    margin-bottom: 100px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.submit-container {
+    padding-top: 15px;
+}
+
+.submit {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 15px;
+}
+
+.notificacao {
+    color: red;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .formulario {
+        width: 75%;
+    }
+
+    .titulo-principal {
+        font-size: 35px;
+        text-align: center;
+        width: 75%;
+    }
+
+    .input {
+        width: 200px;
+    }
+}
+
+/* FOOTER */
+
+.rodape {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background: #fff;
+}
+
+.rodape__moura--logo {
+    width: 150px;
+    height: 51px;
+    margin-top: 10px;
+}
+
+.moura-logo__rodape {
+    width: 150px;
+}
+
+.rodape__whatsapp {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.rodape__whatsapp___texto {
+    font-size: 12px;
+    padding-left: 5px;
+    color: #6ebe71;
+    font-weight: 800;
+    font-family: 'Biennale', sans-serif;
+}
+
+.rodape__phone {
+    align-items: center;
+    display: flex;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.rodape__phone___texto {
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: 'Biennale', sans-serif;
+    color: #ffcf6d;
+}
+
+.rodape__texto {
+    font-family: 'Biennale', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: #182a74;
+}
+
+.icon-github {
+    width: 25px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .rodape__texto {
+        text-align: center;
+    }
+}

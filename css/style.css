@@ -1,0 +1,1056 @@
+
+/*CABECALHO*/
+
+@font-face {
+    font-family: "Biennale";
+    src: url(/fonts/Biennale_Black.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    width: 100%;
+}
+
+.logo-moura {
+    width: 200px;
+}
+
+.mobile__menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile__menu div {
+    width: 32px;
+    height: 4px;
+    background: #cccccc;
+    margin: 8px;
+}
+
+.nav__cabecalho {
+    align-items: center;
+    list-style: none;
+    display: flex;
+}
+
+.itens-nav__cabecalho {
+    width: 110px;
+    text-align: center;
+}
+
+.itens-nav__cabecalho:nth-child(7) {
+    text-align: left;
+    width: 155px;
+}
+
+.itens-nav__cabecalho.login {
+    position: relative;
+    top: 10px;
+}
+
+.link-itens-nav__cabecalho {
+    font-size: 16px;
+    text-decoration: none;
+    color: #182a74;
+    font-family: Helvetica;
+}
+
+.whatsapp-nav__cabecalho {
+    top: 52%;
+    transform: translate(0,-80%);
+    cursor: pointer;
+    position: absolute;
+    right: -52px;
+    float: right;
+}
+
+.whatsapp__icon {
+    position: relative;
+    bottom: 5px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border: 0;
+}
+
+#login__cnpj, #login__senha  {
+    border-width: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    width: 132px;
+    border-color:#007DCE;
+}
+
+#login__cnpj {
+    margin-bottom: 5px;
+}
+
+.login__botao-entrar {
+    border-width: 2px;
+    background-color:#ffcf6d;
+    font-family: Helvetica;
+    position: relative;
+    top: 5px;
+}
+
+.login__solicitar-acesso {
+    color: #007DCE;
+    position: relative;
+    font-family: helvetica;
+    font-size: 12px;
+    margin-left: 5px;
+    top: 5px;
+}
+
+.login__botao-entrar:hover {
+    cursor: pointer;
+}
+
+.login-erro {
+    color: red;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.botao__assistencias {
+    border-width: 2px;
+    background-color:#007DCE;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 500;
+    position: relative;
+}
+
+.botao-sair {
+    border-width: 2px;
+    background-color:#ffcf6d;
+    font-family: Helvetica;
+    position: relative;
+    margin-top: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .login__botao-entrar {
+        margin-left: 0;
+    }
+
+    .itens-nav__cabecalho.login {
+        display: inline-grid;
+        top: -34px;
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-moura {
+        padding-left: 20px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav__cabecalho {
+        position: absolute;
+        top: 14vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #ffe013;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .link-itens-nav__cabecalho {
+        font-size: 19px;
+    }
+
+    .itens-nav__cabecalho:nth-child(3) {
+        width: initial;
+    }
+
+    .mobile__menu {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .itens-nav__cabecalho.login {
+        position: relative;
+        bottom: 30px;
+        top: -30px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1213px) {
+    .login__botao-entrar {
+        display: block;
+        margin-left: 0;
+        top: 5px;
+    }
+    
+    .login__solicitar-acesso {
+        margin-left: 0;
+        top: 5px;
+        position: relative;
+    }
+
+    body {
+        overflow-x:hidden;
+    }
+}
+
+.nav__cabecalho.active {
+    transform: translateX(0);
+}
+
+/*MAIN*/
+
+.barra-mobile {
+    display: none;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 10px;
+    background-color:#182a74;
+    opacity: 40%;
+}
+
+.container__chamada__main-mobile {
+    display: none;
+}
+
+.main {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.container__chamada__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    height: 600px;
+}
+
+.chamada__texto {
+    width: 600px;
+    height: auto;
+}
+
+.texto__titulo {
+    font-size: 75px;
+    line-height: 1.4;
+    font-family: "Biennale", sans-serif;
+    font-weight: 700;
+    color: #182a74;
+}
+
+.texto__titulo2 {
+    font-size: 75px;
+    line-height: 1.4;
+    font-family: 'Biennale', sans-serif;
+    font-weight: 700;
+    color: #007DCE;
+}
+
+.chamada__imagem {
+    width: 600px;
+    margin-left: 5%;
+}
+
+.seta-baixo {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .barra-mobile {
+        display: block;
+    }
+
+    .main-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container__chamada__main-mobile {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: 430px;
+        flex-direction: column;
+        top: 100px;
+        position: absolute;
+    }
+
+    .container__chamada__main {
+        display: none;
+    }
+
+    .container__chamada__main {
+        display: none;
+    }
+
+    .texto__titulo {
+        font-size: 20px;
+    }
+
+    .texto__titulo2 {
+        font-size: 20px;
+    }
+
+    .chamada__texto {
+        text-align: center;
+        width: 300px;
+        top: 40px;
+        position: relative;
+        padding-left: 0;
+    }
+
+    .chamada__imagem {
+        margin-left: 0;
+        width: 240px;
+    }
+
+    .seta-baixo {
+        display: block;
+        position: absolute;
+        top: 620px;
+    }
+
+    .imagem__seta-baixo {
+        width: 30px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .main-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container__chamada__main-mobile {
+        display: flex;
+        top: 190px;
+        position: absolute;
+    }
+
+    .container__chamada__main {
+        display: none;
+    }
+
+    .texto__titulo {
+        font-size: 40px;
+    }
+
+    .texto__titulo2 {
+        font-size: 32px;
+    }
+
+    .chamada__texto {
+        width: 380px;
+        top: 70px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .chamada__imagem {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container__chamada__main-mobile {
+        display: none;
+        top: 190px;
+        position: absolute;
+    }
+
+    .container__chamada__main {
+        display: flex;
+    }
+
+    .main {
+        margin-top: 13px;
+        margin-bottom: 0;
+    }
+
+    .container__chamada__main {
+        margin-top: 0;
+    }
+
+    .chamada__texto {
+        width: 420px;
+    }
+
+    .texto__titulo, .texto__titulo2 {
+        font-size: 40px;
+    }
+
+    .chamada__imagem {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main {
+        margin-bottom: 50px;
+    }
+
+    .container__chamada__main {
+        margin-top: 50px;
+    }
+
+    .chamada__texto {
+        width: 500px;
+    }
+
+    .chamada__imagem {
+        width: 600px;
+    }
+
+    .texto__titulo, .texto__titulo2 {
+        font-size: 45px;
+    }
+}
+
+
+/*TREINAMENTOS*/
+
+.container-card__lista {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-card__lista {
+    width: 500px;
+}
+
+.container-texto__lista {
+    position: relative;
+    max-width: 600px;
+}
+
+.titulo-card {
+    font-weight: 800;
+    font-size: 50px;
+    font-family: 'Biennale', sans-serif;
+    color: #182a74;
+    margin-bottom: 20px;
+}
+
+.descricao-card {
+    font-size: 1.2rem;
+    font-family: 'Biennale', sans-serif;
+    font-weight: 800;
+    color: #182a74;
+    margin-bottom: 40px;
+}
+
+.descricao2 {
+    font-size: 19px;
+    font-family: 'Biennale', sans-serif;
+    font-weight: 800;
+    color: #007DCE;
+    margin-bottom: 50px;
+    line-height: 25px;
+}
+
+.botao-card {
+    width: 160px;
+    font-size: 14px;
+    font-family: "Biennale", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #182a74;
+    cursor: pointer;
+    background-color: #ffe013;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding: 8px 0;
+    margin-bottom: 50px;
+}
+
+.botao-card:hover {
+    background-color: #ffca00;
+}
+
+.container__aplicacoes-card {
+    width: 100%;
+}
+
+.aplicacoes-card {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    font-family: "Biennale", sans-serif;
+    padding-bottom:8px;
+}
+
+.modelos-de-carros__card {
+    color: #8a8a8a;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Biennale", sans-serif;
+    width: 101%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {    
+    .treinamentos {
+        margin-top: 700px;
+    }
+
+    .container-card__lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-texto__lista {
+        padding-top: 100px;
+    }
+    
+    .img-card__lista {
+        width: 300px;
+    }
+
+    .tituloedescricao-card__descricao2 {
+        margin: 0 15px;
+    }
+
+    .titulo-card {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .descricao-card {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .descricao2 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .container__botao-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao-card {
+        font-size: 15px;
+    }
+
+    .container__aplicacoes-card {
+        text-align: center;
+    }
+
+    .aplicacoes-card {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .modelos-de-carros__card {
+        text-align: center;
+        font-size: 15px;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .treinamentos {
+        margin-top: 700px;
+    }
+
+    .container-card__lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-texto__lista {
+        padding-top: 100px;
+    }
+    
+    .img-card__lista {
+        width: 500px;
+    }
+
+    .titulo-card {
+        font-size: 65px;
+        text-align: center;
+    }
+
+    .descricao-card {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .descricao2 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .container__botao-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao-card {
+        font-size: 20px;
+    }
+
+    .aplicacoes-card {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .modelos-de-carros__card {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container-card__lista {
+        flex-direction:row;
+    }
+
+    .img-card__lista {
+        width: 450px;
+        position: relative;
+        top: 0;
+    }
+
+    .container-texto__lista {
+        width: 450px;
+    }
+    .descricao2 {
+        font-size: 17px;
+    }
+    .descricao-card {
+        font-size: 1.1rem;
+    }
+
+    .titulo-card {
+        font-size: 45px;
+    }
+
+    .botao-card {
+        font-size: 14px;
+    }
+
+    .aplicacoes-card {
+        font-size: 14px;
+    }
+
+    .modelos-de-carros__card {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .img-card__lista {
+        width: 550px;
+    }
+
+    .titulo-card {
+        font-size: 50px;
+    }
+
+    .descricao-card {
+        font-size: 1.2rem;
+    }
+    
+}
+
+/*PRODUTOS*/
+
+.container__opcoes--produtos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 170px;
+}
+
+.container__produtos--texto {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.produtos--imagem {
+    width: 500px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container__opcoes--produtos {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .produtos--imagem {
+        padding-top: 50px;
+        width: 280px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container__opcoes--produtos {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .produtos--imagem {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container__opcoes--produtos {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .container__produtos--texto {
+        width: 380px;
+    }
+
+    .produtos__texto--titulo {
+        font-size: 45px;
+    }
+
+    .produtos__texto--subtitulo {
+        font-size: 1.1rem;
+    }
+
+    .produtos--imagem {
+        position: relative;
+        top: 0;
+        width: 400px;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    .produtos--imagem {
+        width: 500px;
+        top: 0;
+    }
+}
+
+/*DESCUBRA SUA BATERIA*/
+
+.container__opcoes--descubra {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 230px;
+}
+
+.descubra__imagem {
+    width: 500px;
+    position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container__opcoes--descubra {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container__descubra--texto {
+        padding-top: 50px;
+    }
+
+    .card-descobrir {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .descubra__imagem {
+        width: 280px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container__opcoes--descubra {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container__descubra--texto {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container__opcoes--descubra {
+        flex-direction: row;
+    }
+    
+    .descubra__imagem {
+        top: 40px;
+        width: 425px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .descubra__imagem {
+        width: 500px;
+    }
+
+    .container__descubra--texto {
+        padding-top: 0;
+    }
+}
+/*REVENDAS*/
+
+.container__opcoes--revendas {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 230px;
+}
+
+.container__revendas--texto {
+    position: relative;
+    bottom: 70px;
+}
+
+.revendas__imagem {
+    width: 400px;
+    box-shadow: 5px 5px 15px 0 black;
+    border-radius: 30px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .container__opcoes--revendas {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .revendas__imagem {
+        width: 280px;
+    }
+
+    .container__revendas--texto {
+        bottom: 0;
+        top: 50px;
+    }
+
+    .card-revendas {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container__opcoes--revendas {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container__revendas--texto {
+        bottom: 0;
+        top: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container__opcoes--revendas {
+        flex-direction: row;
+    }
+    
+    .revendas__imagem {
+        width: 350px;
+    }
+
+    .container__revendas--texto {
+        width: 400px;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .revendas__imagem {
+        margin-top: 0;
+        width: 500px;
+    }
+
+    .container__revendas--texto {
+        bottom: 0;
+    }
+}
+/*LOCALIZAÇÃO*/
+
+.localizacao {
+    background-image: url(../img/bg-home-carreiras.jpg);
+    padding-bottom: 130px;
+    margin-top: 200px;
+    width: 100%;
+    background-size: cover;
+}
+
+.mapa {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa2 {
+    border-radius: 20px;
+    width: 90%;
+    height: 400px;
+}
+
+.localizacao__titulo {
+    font-size: 35px;
+    font-family: 'Biennale', sans-serif;
+    font-weight: 600;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 60px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .localizacao__titulo {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mapa {
+        width: 100%;
+    }
+}
+
+/*FOOTER*/
+
+.rodape {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background: #fff;
+    margin-top: 10px;
+}
+
+.rodape__moura--logo {
+    width: 150px;
+    height: 51px;
+}
+
+.moura-logo__rodape {
+    width: 150px;
+}
+
+.rodape__whatsapp {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.rodape__whatsapp___texto {
+    font-size: 12px;
+    padding-left: 5px;
+    color: #6ebe71;
+    font-weight: 800;
+    font-family: 'Biennale', sans-serif;
+}
+
+.rodape__phone {
+    align-items: center;
+    display: flex;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.rodape__phone___texto {
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: 'Biennale', sans-serif;
+    color: #ffcf6d;
+}
+
+.rodape__texto {
+    font-family: 'Biennale', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: #182a74;
+}
+
+.icon-github {
+    width: 25px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .rodape__texto {
+        text-align: center;
+    }
+}
